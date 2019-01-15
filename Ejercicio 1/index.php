@@ -1,28 +1,47 @@
 <!DOCTYPE html5>
 <html lang="es_ES">
     <head>
-        <meta name="description" content="ejercici3">
+        <meta name="description" content="Rubén">
         <meta name="author" content="Rubén Bermejo Romero">
-        <meta name="keywords" content="ej3">
+        <meta name="keywords" content="log in cookies practica">
         <meta charset="UTF-8">
-        <title>Ejercicio 3</title>
+        <title>Inicio de sesión</title>
     </head>
 
     <body>
+        <?php
+    
+        $usuario1 = "usuario1";
+        $pass1 = "meth";
 
+
+        if (isset($_POST['usuario']) && isset($_POST['pass'])) {
+            if (($_POST['usuario'])==$usuario1 && ($_POST['pass'])==$pass1) {
+                session_start();
+                $_SESSION['usuario'] == $usuario1;
+                header("loaction:menu.php");
+            }
+        } else {
+        ?>
         <h1>Taller XXXXXXXXXXXX</h1>
-
-        <ul>
-            <li><a href="ej3nuevaEntrada.php?paso=1">Anotar entrada</a></li>
-            <li><a href="ej3CambiarEstado.php?paso=1">Cambiar estado a reparándose</a></li>
-            <li><a href="ej3AnotarSalida.php?paso=1">Anotar salida</a></li>
-            <li><a href="ej3eliminarEntrada.php?paso=1">Borrar Entrada</a></li>
-            <li>Listar<ul>
-                <li><a href="ej3Consultar.php?tipo=todo">Todas las entradas</a></li>
-                <li><a href="ej3Consultar.php?tipo=espera">Vehículos en espera</a></li>
-                <li><a href="ej3Consultar.php?tipo=reparandose">Vehículos reparándose</a></li>
-                <li><a href="ej3Consultar.php?tipo=reparado">Vehículos reparados</a></li>
-            </ul></li>
-        </ul>    
+        
+        <form action="index.php" method="POST">
+            <table align="center">
+                <tr>
+                    <td>cancer:</td>
+                    <td><input type="text" name="usuario"/></td>
+                </tr>
+                <tr>
+                    <td>Contraseña:</td>
+                    <td><input type="password" name="pass"/></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" value="Iniciar sesión"/></td>
+                </tr>
+            </table>
+        </form>
+        <?php
+        }
+        ?>
     </body>
 </html>
