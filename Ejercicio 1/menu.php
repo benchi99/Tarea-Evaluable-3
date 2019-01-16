@@ -10,7 +10,15 @@
 
     <body>
 
+        <?php
+
+        include 'compurebaSesionIniciada.php';
+
+        ?>
+
         <h1>Taller XXXXXXXXXXXX</h1>
+
+        <p>Usuario iniciado: <?php echo $_SESSION['usuario']?>. <a href="cerrarsesion.php">Cerrar sesión</a></p>
 
         <ul>
             <li><a href="ej3nuevaEntrada.php?paso=1">Anotar entrada</a></li>

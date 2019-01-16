@@ -19,6 +19,8 @@
         
         <?php 
         
+        include 'compruebaSesionIniciada.php';
+
         function imprimeForm1() {
         ?>
         <form action="ej3AnotarSalida.php" action="GET">

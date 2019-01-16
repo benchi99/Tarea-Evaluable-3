@@ -11,6 +11,9 @@
     <body>
 
         <?php 
+
+            include 'compruebaSesionIniciada.php';
+
             function ValorPost($nombre, $valorPorDefecto='') {
                 if (isset ($_POST[$nombre])){
                     return $_POST[$nombre];

@@ -16,7 +16,9 @@
     <body>
 
     <?php
-
+    
+    include 'compruebaSesionIniciada.php';
+    
     function imprimeForm() {
     ?>
     <form action="ej3eliminarEntrada.php" action="GET">

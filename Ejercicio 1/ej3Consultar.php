@@ -11,6 +11,8 @@
     <body>
         <?php
 
+            include 'compruebaSesionIniciada.php';
+
             /**
              * 
              * Función sencilla que convierte el valor a lo que significa.
