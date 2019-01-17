@@ -14,12 +14,13 @@
         $usuario1 = "usuario1";
         $pass1 = "meth";
 
-
         if (isset($_POST['usuario']) && isset($_POST['pass'])) {
             if (($_POST['usuario'])==$usuario1 && ($_POST['pass'])==$pass1) {
                 session_start();
                 $_SESSION['usuario'] == $usuario1;
                 header("loaction:menu.php");
+            } else {
+                header("location:menu.php");
             }
         } else {
         ?>
