@@ -19,8 +19,7 @@
 
     <?php 
 
-        include 'compruebaSesionIniciada.php';
-
+        include 'verificaCuentaIniciada.php';
 
         function imprimeForm() {
             ?>

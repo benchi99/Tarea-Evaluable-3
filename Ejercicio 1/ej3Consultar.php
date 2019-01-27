@@ -11,7 +11,7 @@
     <body>
         <?php
 
-            include 'compruebaSesionIniciada.php';
+            include 'verificaCuentaIniciada.php';
 
             /**
              * 

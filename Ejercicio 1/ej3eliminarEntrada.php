@@ -16,9 +16,9 @@
     <body>
 
     <?php
-    
-    include 'compruebaSesionIniciada.php';
-    
+
+    include 'verificaCuentaIniciada.php';
+
     function imprimeForm() {
     ?>
     <form action="ej3eliminarEntrada.php" action="GET">
