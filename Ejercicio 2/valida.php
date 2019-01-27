@@ -1,4 +1,5 @@
-<?php   
+<?php
+        
     $usuario1 = "usuario";
     $pass1 = "1234";
 
@@ -18,5 +19,7 @@
         session_start();
         $_SESSION['usuario'] = $usuario;
         header("location:index.php");
+    
     }
+
 ?>
