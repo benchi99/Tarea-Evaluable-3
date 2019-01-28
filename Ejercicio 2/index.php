@@ -5,7 +5,7 @@
         <meta name="author" content="Rubén Bermejo Romero">
         <meta name="keywords" content="ej3">
         <meta charset="UTF-8">
-        <title>Ejercicio 3</title>
+        <title>Ejercicio 2</title>
     </head>
 
     <?php

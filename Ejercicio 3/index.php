@@ -5,10 +5,13 @@
         <meta name="author" content="Rubén Bermejo Romero">
         <meta name="keywords" content="ej3">
         <meta charset="UTF-8">
-        <title>Ejercicio 1</title>
+        <title>Ejercicio 3</title>
     </head>
 
     <?php
+
+        $adminSolo = false;
+
         include 'verificaCuentaIniciada.php';
     ?>
 
