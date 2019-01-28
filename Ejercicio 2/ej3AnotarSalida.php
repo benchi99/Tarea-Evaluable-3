@@ -18,7 +18,8 @@
     <body>
         
         <?php 
-        
+        $adminSolo = true;
+
         include 'verificaCuentaIniciada.php';
 
         function imprimeForm1() {

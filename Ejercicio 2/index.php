@@ -9,6 +9,9 @@
     </head>
 
     <?php
+
+        $adminSolo = false;
+
         include 'verificaCuentaIniciada.php';
     ?>
 

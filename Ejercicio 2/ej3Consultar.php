@@ -11,6 +11,8 @@
     <body>
         <?php
 
+            $adminSolo = false;
+
             include 'verificaCuentaIniciada.php';
 
             /**

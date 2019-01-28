@@ -10,6 +10,8 @@
 
     <body>    
     <?php
+
+        $adminSolo = false;
         include 'verificaCuentaIniciada.php';
 
         session_unset();
