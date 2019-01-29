@@ -50,7 +50,8 @@
                     <td>Contraseña: </td>
                     <td><input type="password" name="pass"/></td>
                 </tr>
-                <tr colspan="2">
+                <tr>
+                    <td><input type="checkbox" name="recordar[]" value="recordar"> Recordar usuario</td>
                     <td><input type="submit" value="Iniciar sesión"/></td>
                 </tr>
             </table>
