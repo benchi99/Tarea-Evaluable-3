@@ -14,6 +14,7 @@
     </head>
         
     <?php
+
         $error = 'no';
 
         if (isset($_GET['error'])) {

@@ -1,31 +1,39 @@
 <?php
         
-    $usuario1 = "usuario";
-    $pass1 = "1234";
+    $conexionBD = mysqli_connect("localhost", "root", "", "taller")
+    or die("Hubo un error al conectarse a la base de datos.");
 
-    $usuario2 = "admin";
-    $pass2 = "4321";
+    $consulta = mysqli_query($conexionBD, "SELECT * FROM usuarios");
 
-    if (!$_POST) {
-        header('location:entrar.php?error=1');
-    } else {
-        if (isset($_POST['usuario']) && isset($_POST['pass'])) {
-            if ($_POST['usuario'] == $usuario1 && $_POST['pass'] == $pass1) {
-                iniciarSesion($usuario1, 'restringido');
-            } else if ($_POST['usuario'] == $usuario2 && $_POST['pass'] == $pass2) {
-                iniciarSesion($usuario2, 'admin');
-            } else {
-                header('location:entrar.php?error=2');
-            }
+   if (isset($_POST['usuario']) && isset($_POST['pass'])) {
+            
+        $exito = false;
+
+        while ($fila = $consulta -> fetch_assoc()) {
+            $usuario = $fila['usuario'];
+            $passHash = $fila['pass'];
+            $tipo = $fila['tipo_usuario'];
+        
+            if ($_POST['usuario'] == $usuario && password_verify($_POST['pass'], $passHash)) {
+                $exito = true;
+                iniciarSesion($usuario, $tipo);
+                break;
+            }          
         }
-    }
 
+        if (!$exito) {
+            header('location:entrar.php?error=2');
+        }
+        
+    } else {
+        header('location:entrar.php?error=1');
+    }
+    
     function iniciarSesion($usuario, $tipo) {
         session_start();
         $_SESSION['usuario'] = $usuario;
         $_SESSION['tipo'] = $tipo; 
         header("location:index.php");
     }
-
 
 ?>
